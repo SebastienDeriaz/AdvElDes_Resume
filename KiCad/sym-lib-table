@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name circuits)(type Legacy)(uri D:/Ecole/HES-SO/Cours/AdvElDes/AdvElDes_Resume/kicad_libraries/circuits.lib)(options "")(descr ""))
+)

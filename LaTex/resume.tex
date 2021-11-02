@@ -1,0 +1,46 @@
+\documentclass[]{article}
+
+
+\usepackage[margin=1cm,includehead,landscape]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+\fancyhead[CO]{AdvElDes - Sébastien Deriaz}
+\fancyhead[LE,RO]{}
+
+
+
+\begin{document}
+\begin{multicols}{3}
+\section{Circuits}
+\subsection{Amplificateurs opérationnels}
+\subsubsection{Single supply, non inverting}
+\begin{center}
+\includegraphics[width=0.7\columnwidth,page=3]{resume/resume-crop.pdf}
+\end{center}
+\begin{enumerate}
+\item Fonctionne en DC
+\item Tension amplifiée autour de $U_{ref}$
+\end{enumerate}
+$$G=\frac{R_b}{R_a}$$
+\subsubsection{Single supply, invering}
+\begin{center}
+\includegraphics[width=0.7\columnwidth,page=4]{resume/resume-crop.pdf}
+\end{center}
+$$G=1+\frac{R_b}{R_a}$$
+\subsubsection{Single supply, differential}
+\begin{center}
+\includegraphics[width=0.7\columnwidth,page=5]{resume/resume-crop.pdf}
+\end{center}
+$$G=2\frac{R_b}{R_a}$$
+
+
+\end{multicols}
+
+
+
+
+
+\end{document}

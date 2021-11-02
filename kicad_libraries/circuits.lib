@@ -1,0 +1,98 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# current
+#
+DEF current I 0 0 N N 1 F N
+F0 "I" 0 100 50 H V C CNN
+F1 "current" 0 100 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -20 0 -50 0 N
+P 2 0 1 0 50 0 30 0 N
+P 4 0 1 0 -20 30 30 0 -20 -30 -20 30 F
+X ~ ~ -100 0 50 R 50 50 1 1 I
+X ~ ~ 100 0 50 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# voltage_long
+#
+DEF voltage_long U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_long" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -150 0 -200 30 -150 -30 -150 F
+P 4 0 1 0 0 -50 0 200 0 -200 0 -150 N
+ENDDRAW
+ENDDEF
+#
+# voltage_long_2
+#
+DEF voltage_long_2 U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_long_2" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -200 0 -250 30 -200 -30 -200 F
+P 4 0 1 0 0 -100 0 250 0 -250 0 -200 N
+ENDDRAW
+ENDDEF
+#
+# voltage_long_3
+#
+DEF voltage_long_3 U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_long_3" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -250 0 -300 30 -250 -30 -250 F
+P 4 0 1 0 0 -150 0 300 0 -300 0 -250 N
+ENDDRAW
+ENDDEF
+#
+# voltage_long_3_copy
+#
+DEF voltage_long_3_copy U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_long_3_copy" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -300 0 -350 30 -300 -30 -300 F
+P 4 0 1 0 0 -200 0 350 0 -350 0 -300 N
+ENDDRAW
+ENDDEF
+#
+# voltage_medium
+#
+DEF voltage_medium U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_medium" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -100 0 -150 30 -100 -30 -100 F
+P 4 0 1 0 0 0 0 150 0 -150 0 -100 N
+ENDDRAW
+ENDDEF
+#
+# voltage_short
+#
+DEF voltage_short U 0 0 N N 1 F N
+F0 "U" 50 0 50 H V C CNN
+F1 "voltage_short" 0 250 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 4 0 1 0 -30 -50 0 -100 30 -50 -30 -50 F
+P 4 0 1 0 0 50 0 100 0 -100 0 -50 N
+ENDDRAW
+ENDDEF
+#
+#End Library

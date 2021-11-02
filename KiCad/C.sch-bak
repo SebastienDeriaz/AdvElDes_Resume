@@ -1,0 +1,136 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:OPAMP U?
+U 1 1 6178B22C
+P 5650 4050
+F 0 "U?" H 5750 4200 50  0000 L CNN
+F 1 "OPAMP" H 5994 4005 50  0001 L CNN
+F 2 "" H 5650 4050 50  0001 C CNN
+F 3 "~" H 5650 4050 50  0001 C CNN
+	1    5650 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3750 5550 3600
+$Comp
+L power:VCC #PWR?
+U 1 1 6178B233
+P 5550 3600
+F 0 "#PWR?" H 5550 3450 50  0001 C CNN
+F 1 "VCC" H 5567 3773 50  0000 C CNN
+F 2 "" H 5550 3600 50  0001 C CNN
+F 3 "" H 5550 3600 50  0001 C CNN
+	1    5550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4350 5550 4450
+$Comp
+L power:GND #PWR?
+U 1 1 6178B23A
+P 5550 4450
+F 0 "#PWR?" H 5550 4200 50  0001 C CNN
+F 1 "GND" H 5555 4277 50  0000 C CNN
+F 2 "" H 5550 4450 50  0001 C CNN
+F 3 "" H 5550 4450 50  0001 C CNN
+	1    5550 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3950 5100 3950
+Wire Wire Line
+	5100 3950 5100 3650
+$Comp
+L Device:R Rb?
+U 1 1 6178B242
+P 5100 3500
+F 0 "Rb?" H 5170 3500 50  0000 L CNN
+F 1 "R" H 5170 3455 50  0001 L CNN
+F 2 "" V 5030 3500 50  0001 C CNN
+F 3 "~" H 5100 3500 50  0001 C CNN
+	1    5100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3350 5100 3200
+Wire Wire Line
+	5100 3950 4850 3950
+Connection ~ 5100 3950
+$Comp
+L Device:R Ra?
+U 1 1 6178B24B
+P 4700 3950
+F 0 "Ra?" V 4585 3950 50  0000 C CNN
+F 1 "R" V 4584 3950 50  0001 C CNN
+F 2 "" V 4630 3950 50  0001 C CNN
+F 3 "~" H 4700 3950 50  0001 C CNN
+	1    4700 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 3950 4550 3950
+Text GLabel 4350 3950 0    50   Input ~ 0
+Uin
+Text GLabel 4350 4150 0    50   Input ~ 0
+Uin_inv
+Wire Wire Line
+	4350 4150 4550 4150
+$Comp
+L Device:R Ra?
+U 1 1 6178B255
+P 4700 4150
+F 0 "Ra?" V 4585 4150 50  0000 C CNN
+F 1 "R" V 4584 4150 50  0001 C CNN
+F 2 "" V 4630 4150 50  0001 C CNN
+F 3 "~" H 4700 4150 50  0001 C CNN
+	1    4700 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 4150 5100 4150
+Wire Wire Line
+	5100 4150 5100 4700
+Wire Wire Line
+	5100 4700 5750 4700
+Connection ~ 5100 4150
+Wire Wire Line
+	5100 4150 5350 4150
+$Comp
+L Device:R Rb?
+U 1 1 6178B260
+P 5900 4700
+F 0 "Rb?" V 5785 4700 50  0000 C CNN
+F 1 "R" V 5784 4700 50  0001 C CNN
+F 2 "" V 5830 4700 50  0001 C CNN
+F 3 "~" H 5900 4700 50  0001 C CNN
+	1    5900 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6050 4700 6200 4700
+Wire Wire Line
+	6200 4700 6200 4050
+Wire Wire Line
+	6200 4050 5950 4050
+Text GLabel 5100 3200 1    50   Input ~ 0
+Uref
+Wire Wire Line
+	6200 4050 6300 4050
+Connection ~ 6200 4050
+Text GLabel 6300 4050 2    50   Input ~ 0
+Uout
+$EndSCHEMATC
