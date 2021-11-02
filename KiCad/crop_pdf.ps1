@@ -1,0 +1,1 @@
+pdfcrop resume.pdf

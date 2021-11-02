@@ -26,11 +26,15 @@ F0 "B" 50
 F1 "B.sch" 50
 $EndSheet
 $Sheet
-S 3000 950  800  700 
+S 3000 950  900  700 
 U 6178A189
 F0 "C" 50
 F1 "C.sch" 50
 $EndSheet
 Text Notes 850  1350 0    50   ~ 0
 Non-inverseur avec\nalimentation unipolaire\n
+Text Notes 2000 1350 0    50   ~ 0
+Inverseur avec\nalimentation unipolaire\n
+Text Notes 3000 1350 0    50   ~ 0
+Différentiel avec\nalimentation unipolaire\n
 $EndSCHEMATC
