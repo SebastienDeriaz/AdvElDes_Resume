@@ -31,4 +31,6 @@ U 6178A189
 F0 "C" 50
 F1 "C.sch" 50
 $EndSheet
+Text Notes 850  1350 0    50   ~ 0
+Non-inverseur avec\nalimentation unipolaire\n
 $EndSCHEMATC
