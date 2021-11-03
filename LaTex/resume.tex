@@ -6,6 +6,7 @@
 \usepackage{multicol}
 \usepackage{graphicx}
 \pagestyle{fancy}
+\usepackage{amsmath}
 
 \fancyhead[CO]{AdvElDes - Sébastien Deriaz}
 \fancyhead[LE,RO]{}
@@ -16,6 +17,11 @@
 \begin{multicols}{3}
 \section{Circuits}
 \subsection{Amplificateurs opérationnels}
+\subsubsection{GBW}
+Produit constant sur la droite du GBW
+$$A_0\cdot \omega_0 = \text{GBW}$$
+Si on a une application avec $\omega_a$, alors le gain maximal est donné par
+$$A_a=\frac{\text{GBW}}{\omega_a}$$
 \subsubsection{Single supply, non inverting}
 \begin{center}
 \includegraphics[width=0.7\columnwidth,page=3]{../KiCad/resume-crop.pdf}
