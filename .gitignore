@@ -42,3 +42,5 @@ out/
 
 # End of https://www.toptal.com/developers/gitignore/api/kicad
 LaTex/resume.aux
+LaTex/resume.synctex.gz
+LaTex/resume.log
