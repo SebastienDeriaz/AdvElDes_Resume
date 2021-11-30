@@ -8,6 +8,7 @@
 \pagestyle{fancy}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage{siunitx}
 
 \fancyhead[CO]{AdvElDes - Résumé 2021}
 \fancyhead[LE,RO]{}
@@ -46,8 +47,14 @@ $$G=2\frac{R_b}{R_a}$$
 \centering
 \includegraphics[width=0.6\columnwidth]{gauss.png}
 \end{figure}
-
+\subsection{Bruit}
+Si un bruit est \textbf{aléatoire} (gaussienne), on peut estimer que le \SI{99.9}{\percent} est compris entre $\pm 3.3\sigma$, il est donc possible de passer de pic-pic à rms en multipliant par $2\cdot 3.3$. La valeur rms est $1\sigma$
+$$U_{\text{noise}_{pk-pk}}=6.6 U_{\text{noise}_{rms}}$$
 \end{multicols}
+
+
+
+
 
 
 
