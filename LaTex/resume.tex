@@ -9,13 +9,31 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{siunitx}
+\usepackage{subfiles}
+\usepackage{enumitem}
 
-\fancyhead[CO]{AdvElDes - Résumé 2021}
-\fancyhead[LE,RO]{}
-\fancyfoot[LE,RO]{}
+
+\fancyhead[L,RO]{}
+\fancyfoot[L,RO]{}
+
 
 \begin{document}
+\fancyhead[C]{PCB}
+\subfile{pcb}
+\pagebreak
+\fancyhead[CO]{Analogique}
 \begin{multicols}{3}
+\subfile{opamp}
+\subfile{adc}
+\end{multicols}
+\pagebreak
+\begin{multicols}{3}
+\fancyhead[CO]{Numérique}
+\subfile{timing}
+\pagebreak
+\end{multicols}
+
+
 \section{Circuits}
 \subsection{Amplificateurs opérationnels}
 \subsubsection{GBW}
@@ -50,7 +68,6 @@ $$G=2\frac{R_b}{R_a}$$
 \subsection{Bruit}
 Si un bruit est \textbf{aléatoire} (gaussienne), on peut estimer que le \SI{99.9}{\percent} est compris entre $\pm 3.3\sigma$, il est donc possible de passer de pic-pic à rms en multipliant par $2\cdot 3.3$. La valeur rms est $1\sigma$
 $$U_{\text{noise}_{pk-pk}}=6.6 U_{\text{noise}_{rms}}$$
-\end{multicols}
 
 
 
