@@ -45,3 +45,6 @@ LaTex/resume.aux
 LaTex/resume.synctex.gz
 LaTex/resume.log
 Download/*
+*.synctex.gz
+*.aux
+*.log
