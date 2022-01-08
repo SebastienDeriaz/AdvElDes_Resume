@@ -11,11 +11,16 @@
 \usepackage{siunitx}
 \usepackage{subfiles}
 \usepackage{enumitem}
-
+\usepackage[dvipsnames]{xcolor}
 
 \fancyhead[L,RO]{}
 \fancyfoot[L,RO]{}
 
+
+\newcommand{\cdelay}{\textcolor{RoyalBlue!75!Black}{\mathbf{cd}}}
+\newcommand{\pdelay}{\textcolor{OrangeRed!75!Black}{\mathbf{pd}}}
+\newcommand{\cdel}{\textcolor{RoyalBlue!75!Black}{\mathbf{c}}}
+\newcommand{\pdel}{\textcolor{OrangeRed!75!Black}{\mathbf{p}}}
 
 \begin{document}
 \fancyhead[C]{PCB}
@@ -27,11 +32,11 @@
 \subfile{adc}
 \end{multicols}
 \pagebreak
-\begin{multicols}{3}
+
 \fancyhead[CO]{Numérique}
 \subfile{timing}
 \pagebreak
-\end{multicols}
+\end{document}
 
 
 \section{Circuits}
@@ -77,4 +82,3 @@ $$U_{\text{noise}_{pk-pk}}=6.6 U_{\text{noise}_{rms}}$$
 
 
 
-\end{document}
