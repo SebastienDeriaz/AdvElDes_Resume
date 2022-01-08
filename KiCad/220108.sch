@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 10
+Sheet 7 10
 Title ""
 Date ""
 Rev ""
@@ -14,21 +14,21 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 850  750  950  550 
-U 6178215D
-F0 "211026" 50
-F1 "211026.sch" 50
+S 600  700  1200 700 
+U 61D980BF
+F0 "P17_1" 50
+F1 "P17_1.sch" 50
 $EndSheet
 $Sheet
-S 1900 750  800  550 
-U 6178C7F5
-F0 "211027" 50
-F1 "211027.sch" 50
+S 1850 700  700  700 
+U 61DA23CA
+F0 "eq_NPN" 50
+F1 "eq_NPN.sch" 50
 $EndSheet
 $Sheet
-S 2750 750  750  550 
-U 61D98057
-F0 "220108" 50
-F1 "220108.sch" 50
+S 2600 700  500  700 
+U 61DB86CF
+F0 "eq_NPN_2" 50
+F1 "eq_NPN_2.sch" 50
 $EndSheet
 $EndSCHEMATC

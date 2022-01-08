@@ -47,6 +47,7 @@ Les signaux différentiels produisent moins de perturbations et sont moins pertu
 \end{enumerate}
 \paragraph{Plan image} terme pour une couche pleine (masse ou alim). Sert de chemin de retour pour les pistes des autres couches. 
 \subsection{Pistes}
+$R=\SI{19}{\milli\ohm\per\centi\meter}$ pour \SI{0.254}{\milli\meter} de largeur et \SI{35}{\micro\meter} d'épaisseur
 \subsubsection{Stripline}
 \begin{figure}[H]
 \centering
@@ -124,6 +125,7 @@ Attention aux pass-through vias sont des "bouchons" et des antennes emettrices. 
 \end{multicols}
 Stitching avec une distance $\lambda/10$ pour améliorer la protection des zones sensibles.\\
 Pour connecteur deux plans, utiliser des capa si le signal est rapide et des inductances si le signal est lent.\\
+Relier deux plans de masse séparés par deux diodes Schottky tête-bêche
 \subsection{Antennes}
 Champ électrique $E$ généré par une boucle d'aire $A$ traversée par un courant $I$ à une distance $R$
 $$E\sim \frac{k^2 IA}{4\pi}\sqrt{\frac{\mu}{\epsilon}}\left(\frac{1}{R}\right)\qquad k=\frac{2\pi}{\lambda}=\frac{\omega}{c}$$
@@ -179,7 +181,7 @@ Gros condensateur (\SIrange{10}{50}{\micro\farad}) pour découpler l'alimentatio
 \centering
 \includegraphics[width=5.00cm]{img_9.png}
 \end{figure}
-Garder les connexions courtes, éviter de mettre les condensateurs dans le même sens
+Garder les connexions courtes, éviter de mettre les condensateurs dans le même sens, placer les vias directement dans les pads si nécessaire.
 \subsection{Plans}
 Capacité intrinsèque entre les plans :
 $$C=\varepsilon_0\varepsilon_r\frac{A}{d}$$

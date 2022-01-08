@@ -1,0 +1,222 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L circuits:source_courant I?
+U 1 1 61D98BAD
+P 2250 1700
+F 0 "I?" V 2250 1828 50  0001 L CNN
+F 1 "source_courant" H 2250 2000 50  0001 C CNN
+F 2 "" H 2250 1700 50  0001 C CNN
+F 3 "" H 2250 1700 50  0001 C CNN
+	1    2250 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 1900 2250 1950
+$Comp
+L Device:R R?
+U 1 1 61D996BE
+P 2250 2250
+F 0 "R?" H 2320 2296 50  0001 L CNN
+F 1 "R'E" H 2320 2250 50  0000 L CNN
+F 2 "" V 2180 2250 50  0001 C CNN
+F 3 "~" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2400 2250 2500
+$Comp
+L power:GND #PWR?
+U 1 1 61D998F1
+P 2250 2550
+F 0 "#PWR?" H 2250 2300 50  0001 C CNN
+F 1 "GND" H 2255 2377 50  0000 C CNN
+F 2 "" H 2250 2550 50  0001 C CNN
+F 3 "" H 2250 2550 50  0001 C CNN
+	1    2250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1950 1900 1950
+Wire Wire Line
+	1900 1950 1900 2100
+Connection ~ 2250 1950
+Wire Wire Line
+	2250 1950 2250 2100
+$Comp
+L Device:C C?
+U 1 1 61D99A41
+P 1900 2250
+F 0 "C?" H 2015 2296 50  0001 L CNN
+F 1 "Ce" H 2015 2250 50  0000 L CNN
+F 2 "" H 1938 2100 50  0001 C CNN
+F 3 "~" H 1900 2250 50  0001 C CNN
+	1    1900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2400 1900 2500
+Wire Wire Line
+	1900 2500 2250 2500
+Connection ~ 2250 2500
+Wire Wire Line
+	2250 2500 2250 2550
+Wire Wire Line
+	2250 1200 2800 1200
+Wire Wire Line
+	2800 1200 2800 1500
+$Comp
+L Device:C C?
+U 1 1 61D9A12C
+P 2800 1650
+F 0 "C?" H 2915 1696 50  0001 L CNN
+F 1 "Cm" H 2915 1650 50  0000 L CNN
+F 2 "" H 2838 1500 50  0001 C CNN
+F 3 "~" H 2800 1650 50  0001 C CNN
+	1    2800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1800 2800 1900
+$Comp
+L power:GND #PWR?
+U 1 1 61D9A46E
+P 2800 1900
+F 0 "#PWR?" H 2800 1650 50  0001 C CNN
+F 1 "GND" H 2805 1727 50  0000 C CNN
+F 2 "" H 2800 1900 50  0001 C CNN
+F 3 "" H 2800 1900 50  0001 C CNN
+	1    2800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1200 3300 1200
+Wire Wire Line
+	3300 1200 3300 1500
+Connection ~ 2800 1200
+$Comp
+L Device:R R?
+U 1 1 61D9A7AE
+P 3300 1650
+F 0 "R?" H 3370 1696 50  0001 L CNN
+F 1 "Rc" H 3370 1650 50  0000 L CNN
+F 2 "" V 3230 1650 50  0001 C CNN
+F 3 "~" H 3300 1650 50  0001 C CNN
+	1    3300 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1800 3300 1900
+$Comp
+L power:GND #PWR?
+U 1 1 61D9AAC7
+P 3300 1900
+F 0 "#PWR?" H 3300 1650 50  0001 C CNN
+F 1 "GND" H 3305 1727 50  0000 C CNN
+F 2 "" H 3300 1900 50  0001 C CNN
+F 3 "" H 3300 1900 50  0001 C CNN
+	1    3300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61D9AD48
+P 1400 1950
+F 0 "R?" V 1193 1950 50  0001 C CNN
+F 1 "Rg" V 1285 1950 50  0000 C CNN
+F 2 "" V 1330 1950 50  0001 C CNN
+F 3 "~" H 1400 1950 50  0001 C CNN
+	1    1400 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 1950 1200 1950
+Wire Wire Line
+	1200 1950 1200 2150
+$Comp
+L circuits:source_tension Ug
+U 1 1 61D9B8AB
+P 1200 2350
+F 0 "Ug" V 1200 2478 50  0000 L CNN
+F 1 "source_tension" H 1200 2550 50  0001 C CNN
+F 2 "" H 1200 2350 50  0001 C CNN
+F 3 "" H 1200 2350 50  0001 C CNN
+	1    1200 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1200 2550 1200 2650
+$Comp
+L power:GND #PWR?
+U 1 1 61D9C137
+P 1200 2650
+F 0 "#PWR?" H 1200 2400 50  0001 C CNN
+F 1 "GND" H 1205 2477 50  0000 C CNN
+F 2 "" H 1200 2650 50  0001 C CNN
+F 3 "" H 1200 2650 50  0001 C CNN
+	1    1200 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 2100 1950 0    50   ~ 0
+b
+Text Notes 2250 2450 0    50   ~ 0
+e
+Text Notes 2250 1500 0    50   ~ 0
+c
+$Comp
+L circuits:voltage_long Urc
+U 1 1 61D9E730
+P 3550 1650
+F 0 "Urc" H 3608 1650 50  0000 L CNN
+F 1 "voltage_long" H 3550 1900 50  0001 C CNN
+F 2 "" H 3550 1650 50  0001 C CNN
+F 3 "" H 3550 1650 50  0001 C CNN
+	1    3550 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:current I?
+U 1 1 61D9F10E
+P 1750 1950
+F 0 "I?" H 1750 2053 50  0001 C CNN
+F 1 "Ib = 0" H 1750 2053 50  0000 C CNN
+F 2 "" H 1750 1950 50  0001 C CNN
+F 3 "" H 1750 1950 50  0001 C CNN
+	1    1750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1950 1900 1950
+Connection ~ 1900 1950
+Wire Wire Line
+	1650 1950 1550 1950
+$Comp
+L circuits:current Ic=gm*Ube
+U 1 1 61DA08D3
+P 2250 1350
+F 0 "Ic=gm*Ube" V 2250 1408 50  0000 L CNN
+F 1 "current" H 2250 1450 50  0001 C CNN
+F 2 "" H 2250 1350 50  0001 C CNN
+F 3 "" H 2250 1350 50  0001 C CNN
+	1    2250 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 1500 2250 1450
+Wire Wire Line
+	2250 1250 2250 1200
+$EndSCHEMATC

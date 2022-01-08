@@ -2,5 +2,48 @@
 
 
 \begin{document}
-opamp
+\begin{multicols}{3}
+\section{Amplificateurs opérationnels}
+
+\subsection{Modèle petits signaux du BJT}
+\begin{center}
+\begin{tabular}{ll}
+$I_0$ & Courant de polarisation sur la sortie\\
+$U_{\text{early}}$ & Tension de Early (\SIrange{15}{150}{\volt})\\
+$I_B$ & Courant de polarisation de base\\
+$U_T$ & Tension thermique (\SI{\approx 25}{\milli\volt})\\
+$\beta$ & Gain du transistor\\
+$C_m$ & Capacité de Miller (sortie)\\
+$C_e$ & Capacité de Miller reportée sur la base
+\end{tabular}
+\end{center}
+$$U_T=\frac{kT}{e}\quad k=\num{1.381e-23}\quad e=\num{1.602e-19}$$
+\subsubsection{Modèle du livre}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1,page=9]{../KiCad/resume-crop.pdf}
+\end{figure}
+
+
+$$R_{be}=\frac{\beta}{g_m}=\frac{U_T}{I_B}$$
+
+$$I_0=\beta I_B$$
+$$g_m=\frac{I_0}{U_T}$$
+$$C_e=(1+A)C_m\qquad \text{approximation : } C_e\approx AC_m$$
+
+$$R_C=\frac{U_{\text{early}}}{I_0}$$
+
+
+$$f_c=\frac{1}{2\pi R_{be} A C_m}$$
+\subsubsection{Modèle du cours}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1,page=10]{../KiCad/resume-crop.pdf}
+\end{figure}
+$$R'_E=\frac{R_{be}}{\beta}$$
+
+$$f_c=\frac{1}{2\pi \beta R'_E A C_m}$$
+
+
+\end{multicols}
 \end{document}
