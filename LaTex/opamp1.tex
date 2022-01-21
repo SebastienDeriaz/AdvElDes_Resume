@@ -99,12 +99,46 @@ On utilise un miroir de courant comme charge active.
 \end{figure}
 
 \subsubsection{Cascode}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{../images/OpAmp1/m_cascode.png}
+\end{figure}
+Haute résistance de de sortie et réduit la capacité de Miller\\
+Le gain est de $ A \cong \frac{R_c}{r_{s1}}$
 
 \subsubsection{Conversion d'impédance}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{../images/OpAmp1/m_convImp.png}
+\end{figure}
 
 \subsubsection{Push-Pull}
 
 \subsubsection{Darlington}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{../images/OpAmp1/m_darlington.png}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{../images/OpAmp1/mPS_darlington.png}
+\end{figure}
+$\beta \cong \beta_1\beta_2 $ et $r_{BE} \cong r_{BE1} + \beta_1(r_{BE2}//R)$
+
+\subsection{Tensions d'alimentation}
+\begin{itemize}
+\item Différentiel (+15V,-15V)
+\item Simple alimentation (30V,0V) avec point milieu à +15V
+\item plage positive (30V,0V) sans point milieu
+\end{itemize}
+
+\subsubsection{Rail-to-Rail}
+Plage d'entrée et/ou sortie vont jusqu'au tension d'alimentation
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{../images/OpAmp1/railTorail.png}
+\end{figure}
+Amplificateur différentiel avec substrat pilotable
 
 \end{multicols}
 \end{document}
