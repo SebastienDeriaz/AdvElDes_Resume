@@ -2,6 +2,10 @@
 
 ## Modalités
 
+- Openbook
+- Ordinateur
+  - Possibilité d'utiliser MatLab et/ou LTSpice
+
 ### Contenu
 
 ## Liste des sujets
