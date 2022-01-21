@@ -142,4 +142,16 @@ F 3 "" H 2700 2750 50  0001 C CNN
 	1    2700 2750
 	1    0    0    -1  
 $EndComp
+Wire Notes Line
+	1800 2350 4000 2350
+Wire Notes Line
+	4000 2350 4000 3100
+Wire Notes Line
+	4000 3100 1800 3100
+Wire Notes Line
+	1800 3100 1800 2350
+Text Notes 2650 2450 0    50   ~ 0
+transistor
+Text Notes 4050 2450 0    50   ~ 0
+charge
 $EndSCHEMATC

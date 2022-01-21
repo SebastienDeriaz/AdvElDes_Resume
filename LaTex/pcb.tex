@@ -103,29 +103,6 @@ réduction de la distance entre couche signaux et couche plan permet de rendre l
 \item S-G-S--S-V-S
 \item S-G-V-S-S-V-G-S
 \end{enumerate}
-\subsection{Plan de masse}
-\paragraph{Masse chaude} : fait le tour du circuit (vis, connecteurs)
-\paragraph{Masse froide} : GND interne du circuit
-Les deux masses sont reliées par un pont qui empêche le passage des perturbations.\\
-Il faut éviter les interruptions du plan de masse (surtout si elles sont longues).\\
-Lorsqu'il y a plusieurs plans de masse (AGND, DGND), on utilise une connexion en étoile. Si l'impédance du plan de masse est assez faible on peut les fusionner\\
-Remplir toutes les zones non-utilisées par des plans de masse (ou de VCC).\\
-Attention aux pass-through vias sont des "bouchons" et des antennes emettrices. Elles créent des trous dans le plan de référence et réduisent l'effet de blindage
-\subsubsection{Séparation du plan de masse}
-\begin{multicols}{2}
-\begin{enumerate}[label={+}]
-\item isolation de zones (analogique sensible, connections à des appareils bruyants)
-\item Contrôle des chemin de retour 
-\item Réduction des capacités parasites
-\end{enumerate}
-\begin{enumerate}[label={-}]
-\item Les coupures peuvent générer des antennes
-\item Pas forcément utile
-\end{enumerate}
-\end{multicols}
-Stitching avec une distance $\lambda/10$ pour améliorer la protection des zones sensibles.\\
-Pour connecteur deux plans, utiliser des capa si le signal est rapide et des inductances si le signal est lent.\\
-Relier deux plans de masse séparés par deux diodes Schottky tête-bêche
 \subsection{Antennes}
 Champ électrique $E$ généré par une boucle d'aire $A$ traversée par un courant $I$ à une distance $R$
 $$E\sim \frac{k^2 IA}{4\pi}\sqrt{\frac{\mu}{\epsilon}}\left(\frac{1}{R}\right)\qquad k=\frac{2\pi}{\lambda}=\frac{\omega}{c}$$
@@ -138,10 +115,16 @@ $$E\sim \frac{ILf}{4\epsilon_0 R}$$
 \subsubsection{Antenne "slot"}
 \begin{figure}[H]
 \centering
-\includegraphics[width=5.00cm]{img_6.png}
+\includegraphics[width=6.00cm]{img_6.png}
 \end{figure}
-$$f=\frac{c}{\lambda}$$
+$$f=\frac{c}{\lambda\sqrt{\varepsilon_r}}$$
+FR-4 : $\varepsilon_r=4\quad (2.5...6)$
 \subsection{Horloge}
+\begin{itemize}
+\item Mêmes longueurs de pistes (distribution en étoile)
+\item Ne pas traverser des trous dans le GND
+\item Blindage éventuel pour éviter le rayonnement (signaux analogiques faibles).
+\end{itemize}
 \subsubsection{Jitter}
 Petites variation d'un oscillator. Le jitter contribue à réduire le rapport signal sur bruit
 $$\text{SNR}=20\log_{10}\left(\frac{1}{2\pi ft_\text{jitter}}\right)$$
@@ -157,6 +140,14 @@ Pour éviter ça, mettre le distributeur de clock au centre et distribuer avec d
 \centering
 \includegraphics[width=4.00cm]{img_27.png}
 \end{figure}
+
+\subsubsection{Émissions}
+L'horloge peut émettre des perturbations si :
+\begin{itemize}
+\item Il existe des boucles de retour de courant
+\item L'horloge traverse des antennes slot
+\end{itemize}
+Si on doit traverser une fente, on peut ajouter un condensateur.
 
 
 \subsection{Découplage}
@@ -186,6 +177,29 @@ Garder les connexions courtes, éviter de mettre les condensateurs dans le même
 Capacité intrinsèque entre les plans :
 $$C=\varepsilon_0\varepsilon_r\frac{A}{d}$$
 Éviter la résonance des plans en choisissant un rapport longueur / largeur irrationnel.
+\subsection{Plan de masse}
+\paragraph{Masse chaude} : fait le tour du circuit (vis, connecteurs)
+\paragraph{Masse froide} : GND interne du circuit
+Les deux masses sont reliées par un pont qui empêche le passage des perturbations.\\
+Il faut éviter les interruptions du plan de masse (surtout si elles sont longues).\\
+Lorsqu'il y a plusieurs plans de masse (AGND, DGND), on utilise une connexion en étoile. Si l'impédance du plan de masse est assez faible on peut les fusionner\\
+Remplir toutes les zones non-utilisées par des plans de masse (ou de VCC).\\
+Attention aux pass-through vias sont des "bouchons" et des antennes emettrices. Elles créent des trous dans le plan de référence et réduisent l'effet de blindage
+\subsubsection{Séparation des plan de masse}
+\begin{multicols}{2}
+\begin{enumerate}[label={+}]
+\item isolation de zones (analogique sensible, connections à des appareils bruyants)
+\item Contrôle des chemin de retour 
+\item Réduction des capacités parasites
+\end{enumerate}
+\begin{enumerate}[label={-}]
+\item Les coupures peuvent générer des antennes
+\item Pas forcément utile
+\end{enumerate}
+\end{multicols}
+Stitching avec une distance $\lambda/10$ pour améliorer la protection des zones sensibles.\\
+Pour connecteur deux plans, utiliser des capa si le signal est rapide et des inductances si le signal est lent.\\
+Relier deux plans de masse séparés par deux diodes Schottky tête-bêche ou par des ferrites
 \subsection{Lignes de transmission}
 Impédance caractéristique à HF (impédance de la ligne non fermée, si elle possédait une longueur infinie) :
 $$Z_0\approx \sqrt{\frac{L'}{C'}} $$
@@ -254,25 +268,42 @@ Immunité aux perturbations en mode commun et aux perturbations sur le GND et mo
 \subsubsection{Terminaisons}
 Éviter les reflections avec une terminaison égale à l'impédance de la ligne $Z_0$ (série ou parallèle).\\
 \subsubsection{Parallèles}
+\begin{itemize}
+\item Plus de puissance
+\item Moins de temps de montée/descente
+\end{itemize}
 \begin{figure}[H]
 \centering
 \includegraphics[width=4.00cm]{img_22.png}
 \end{figure}
+\subsubsection{Thévenin}
+Pas recommandé pour TTL et CMOS
 \begin{figure}[H]
 \centering
 \includegraphics[width=4.00cm]{img_23.png}
 \end{figure}
+\subsubsection{Couplage AC}
+\begin{itemize}
+\item Dégrade trop les signaux d'horloge
+\end{itemize}
 \begin{figure}[H]
 \centering
 \includegraphics[width=4.00cm]{img_24.png}
 \end{figure}
-terminaison côté récepteur, le niveau de commutation est fait en une seule étape, grande dissipation de puissance.
+Terminaison côté récepteur, le niveau de commutation est fait en une seule étape, grande dissipation de puissance.
 \subsubsection{Séries}
-Uniquement pour des connexions point-to-point, faible pertes, pour des charges avec impédance élevée.
+\begin{itemize}
+\item Uniquement pour des connexions point-to-point
+\item faible pertes
+\item pour des charges avec impédance élevée
+\item Grand temps de montée/descente
+\end{itemize}
+Pour un signal d'horloge : Buffers puis résistances séries vers la source.
 \begin{figure}[H]
 \centering
 \includegraphics[width=3.00cm]{img_25.png}
 \end{figure}
+A utiliser pour des arbres d'horloge (avec plusieurs résistances au début)
 \subsection{Routage}
 Oscillateur et circuits rapides au centre du pcb, les circuits de puissance sont placés vers les alim et les régulateurs, diviser le pcb selon les composants.\\
 Éviter les connexions en grilles, privilégier plus de pistes sans avoir à percer le plan de masse
@@ -309,15 +340,65 @@ Toujours mieux d'avoir un système sur un seul PCB. Plusieurs cartes donnent :
 Pour un signal très sensible et rapide, utiliser un canal LVDS (high speed serial differential channel).\\
 Toujours faire un blindage au niveau PCB avant de toucher à l'armoire
 \subsection{ESD}
-Filtrage immédiat à l'entrée du câble dans le PCB, diminuer l'aire des boucles, bien faire attention à la mise à terre du PCB (masse chaude et froide si nécessaire).
+Filtrage immédiat à l'entrée du câble dans le PCB, diminuer l'aire des boucles, bien faire attention à la mise à terre du PCB (masse chaude et froide si nécessaire).\\
+Utiliser des diodes transil pour absorber les tensions.
 \subsection{Testabilité}
-Ajouter des points de tests pour tous les nets. Remplir tous les vias, toutes les pins de BGA doivent être accessibles depuis la face opposée. Prévoir des points de tests sur les alimentations de chaque IC ainsi que sur les reset.\\
-Prévoir de désactiver les oscillateurs.\\
-Connecter les entrées inutilisées au GND
+\begin{itemize}
+\item Ajouter des points de tests pour tous les nets
+\item Toutes les pins de BGA doivent être accessibles depuis la face opposée
+\item Prévoir des points de tests sur les alimentations de chaque IC ainsi que sur les reset
+\item Prévoir de désactiver les oscillateurs
+\item Connecter les entrées inutilisées au GND
+\item Ajouter des résistances de \SI{0}{\ohm} pour déconnecter certaines parties
+\end{itemize}
+\subsection{Ferrites / Condensateurs}
+\begin{itemize}
+\item Condensateurs pour les signaux rapides $>\SI{10}{\mega\hertz}$ et qui varient continuellement
+\item Ferrites pour les signaux à basse fréquence et/ou broadband (comme UART)
+\end{itemize}
 \subsection{Illustrations}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\columnwidth]{img_30.png}
 \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=5.00cm]{img_83.png}
+\end{figure}
+\subsection{Réponses aux quiz}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_84.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_85.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_86.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_87.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_88.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_89.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_90.png}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{img_91.png}
+\end{figure}
+
+
 \end{multicols}
 \end{document}
