@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 12
+Sheet 2 16
 Title ""
 Date ""
 Rev ""
@@ -37,4 +37,10 @@ Text Notes 2000 1350 0    50   ~ 0
 Inverseur avec\nalimentation unipolaire\n
 Text Notes 3000 1350 0    50   ~ 0
 Différentiel avec\nalimentation unipolaire\n
+Text Notes 3300 1850 0    50   ~ 0
+validé\n
+Text Notes 1050 1850 0    50   ~ 0
+validé
+Text Notes 2350 1850 0    50   ~ 0
+validé
 $EndSCHEMATC
