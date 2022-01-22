@@ -26,18 +26,22 @@ $$U_T=\frac{kT}{e}\quad k=\num{1.381e-23}\quad e=\num{1.602e-19}$$
 \end{figure}
 
 
-$$R_{be}=\frac{\beta}{g_m}=\frac{U_T}{I_B}$$
+$$R_{be}=\frac{\beta}{g_m}=\frac{U_T}{I_0}$$
 
 $$I_0=\beta I_B$$
-$$g_m=\frac{I_0}{U_T}$$
+$$g_m=\frac{I_0}{U_T}=\frac{1}{R_E'}$$
 $$C_e=(1+\abs{A})C_m\qquad \text{approximation : } C_e\approx AC_m$$
 $$A=-\frac{R_c\beta}{R_{be}}$$
 $$R_C=\frac{U_{\text{early}}}{I_0}$$
 
 
 $$f_c=\frac{1}{2\pi R_{be} \abs{A} C_m}$$
-
-$$\text{GBW}=Af_c$$
+A noter que le gain $A$ est le gain vu par le transistor. Si on modifie la suite du circuit pour diminuer le gain, il faudra mettre à jour les valeurs calculées.
+\subsubsection{GBW}
+Produit constant sur la droite du GBW
+$$A\cdot \omega_c = \text{GBW}\qquad \omega_c=2\pi f_c$$
+Si on a une application avec $\omega_a$, alors le gain maximal est donné par
+$$A_{max_\omega}=\frac{\text{GBW}}{\omega}$$
 \subsubsection{Modèle du cours}
 \begin{figure}[H]
 \centering

@@ -18,7 +18,18 @@ Partir du point demandé (entrée ou sortie) et recherche le chemin "logique" qu
 \includegraphics[width=\columnwidth]{img_52.png}
 \end{figure}
 $$U_N\in\begin{pmatrix}13.4\\ \cancel{-14.4}-13.8\end{pmatrix}\quad U_P\in\begin{pmatrix}13.4\\-13.8\end{pmatrix}\quad U_a\in\begin{pmatrix}13.4\\-13.2\end{pmatrix}$$
-... a compléter...
+Pour les signaux différentiels, ils doivent être identiques donc on utilise la plage la plus faible pour chaque borne.\\
+Le \SI{-14.4}{\volt} (à gauche sur le schéma) viens d'une chute de tension de jonction NPN. Le \SI{-13.8}{\volt} (au milieu en bas sur le schéma) viens de la chute de tension double dans le darlington.
+$$U_D=U_P-U_N$$
+$$I_q=\frac{U_D}{2r_E'}\qquad r_E'=\frac{U_T}{I_0}$$
+La tension $U_1$ est entre la base de $T_5$ et la masse.
+$$U_1=-2R_1I_q$$
+$$U_a=-U_1\frac{R_2}{r_{s5}}$$
+$$f_0\approx \frac{1}{2\pi R_1C_k}\cdot \frac{r_{s5}}{R_2}=\SI{5.3}{\hertz}$$
+$$S_R=\frac{I_1}{C_k}=\SI{10}{\volt\per\micro\second}$$
+$$A=2\frac{R_1R_2}{2r'_E\frac{1}{0.005}}=400'000$$
+$$\text{GBW}=A2\pi f_0$$
+$$A_{max}=\frac{\text{GBW}}{2\pi \cdot 10'000}=212$$
 \subsection{Amplificateur à transconductance}
 $$S_D=\frac{I_0}{2U_T}\ \left[\si{\ampere\per\volt}\right]$$
 Possibilité de modifier la transconductance en ajoutant une résistance $R_E$ entre les émetteurs de l'étage différentiel.\\
