@@ -126,9 +126,9 @@ Un seul nœud d'entrée, tous les condensateurs sont entre des noeuds et le GND,
 \end{figure}
 Délai sur le nœud $i$ :
 \begin{align*}
-\tau_{Di}&=R_1C_1\\&+(R_1\textcolor{OrangeRed}{+R_2})C_2\\&+(R_1+R_3)C_3\\&+(R_1+R_3\textcolor{OrangeRed}{+R_4})C_4\\&+(R_1+R_3+R_i)C_i
+\tau_{Di}&=R_1C_1\\&+(R_1)C_2\\&+(R_1+R_3)C_3\\&+(R_1+R_3)C_4\\&+(R_1+R_3+R_i)C_i
 \end{align*}
-\textcolor{OrangeRed}{Vérifier ce qui est en rouge !}
+\textcolor{OrangeRed}{Attention} On ne considère que les résistances qui sont "sur notre chemin" (pour aller à $C_i$ dans ce cas). Donc les condensateurs qui sont en périphérie sont multipliés uniquement par les résistances qui sont sur notre chemin et qui permettent d'y arriver.
 \subsubsection{Représentation linéaire}
 $$\frac{\tau_{\pdelay}}{\tau}=d=(p+f)$$
 \paragraph{Délai parasite $p$} : Propre à la porte logique (en principe invariant)

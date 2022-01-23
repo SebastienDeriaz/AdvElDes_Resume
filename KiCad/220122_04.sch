@@ -1,0 +1,242 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 18 18
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Opamp_Dual_Generic U?
+U 1 1 61ED987C
+P 1950 2650
+F 0 "U?" H 1950 3017 50  0001 C CNN
+F 1 "Opamp_Dual_Generic" H 1950 2926 50  0001 C CNN
+F 2 "" H 1950 2650 50  0001 C CNN
+F 3 "~" H 1950 2650 50  0001 C CNN
+	1    1950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Opamp_Dual_Generic U?
+U 1 1 61ED9C4B
+P 1950 3600
+F 0 "U?" H 1950 3967 50  0001 C CNN
+F 1 "Opamp_Dual_Generic" H 1950 3876 50  0001 C CNN
+F 2 "" H 1950 3600 50  0001 C CNN
+F 3 "~" H 1950 3600 50  0001 C CNN
+	1    1950 3600
+	1    0    0    1   
+$EndComp
+Text GLabel 850  2550 0    50   Input ~ 0
+Uin
+Wire Wire Line
+	850  2550 900  2550
+$Comp
+L Device:R R?
+U 1 1 61EDA016
+P 1400 2550
+F 0 "R?" V 1193 2550 50  0001 C CNN
+F 1 "R1" V 1285 2550 50  0000 C CNN
+F 2 "" V 1330 2550 50  0001 C CNN
+F 3 "~" H 1400 2550 50  0001 C CNN
+	1    1400 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61EDA350
+P 1400 2950
+F 0 "R?" V 1193 2950 50  0001 C CNN
+F 1 "R1" V 1285 2950 50  0000 C CNN
+F 2 "" V 1330 2950 50  0001 C CNN
+F 3 "~" H 1400 2950 50  0001 C CNN
+	1    1400 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61EDA78A
+P 1400 3500
+F 0 "R?" V 1193 3500 50  0001 C CNN
+F 1 "R1" V 1285 3500 50  0000 C CNN
+F 2 "" V 1330 3500 50  0001 C CNN
+F 3 "~" H 1400 3500 50  0001 C CNN
+	1    1400 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61EDAA88
+P 1400 3900
+F 0 "R?" V 1193 3900 50  0001 C CNN
+F 1 "R1" V 1285 3900 50  0000 C CNN
+F 2 "" V 1330 3900 50  0001 C CNN
+F 3 "~" H 1400 3900 50  0001 C CNN
+	1    1400 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 2950 1200 2950
+$Comp
+L power:GND #PWR?
+U 1 1 61EDACF3
+P 1200 2950
+F 0 "#PWR?" H 1200 2700 50  0001 C CNN
+F 1 "GND" V 1205 2822 50  0000 R CNN
+F 2 "" H 1200 2950 50  0001 C CNN
+F 3 "" H 1200 2950 50  0001 C CNN
+	1    1200 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2950 1600 2950
+Wire Wire Line
+	1600 2950 1600 2750
+Wire Wire Line
+	1600 2750 1650 2750
+Wire Wire Line
+	1550 2550 1600 2550
+Wire Wire Line
+	900  2550 900  3500
+Wire Wire Line
+	900  3500 1250 3500
+Connection ~ 900  2550
+Wire Wire Line
+	900  2550 1250 2550
+Wire Wire Line
+	1550 3500 1600 3500
+Wire Wire Line
+	1650 3700 1600 3700
+Wire Wire Line
+	1600 3700 1600 3900
+Wire Wire Line
+	1600 3900 1550 3900
+Wire Wire Line
+	1250 3900 1200 3900
+$Comp
+L power:GND #PWR?
+U 1 1 61EDCB38
+P 1200 3900
+F 0 "#PWR?" H 1200 3650 50  0001 C CNN
+F 1 "GND" V 1205 3772 50  0000 R CNN
+F 2 "" H 1200 3900 50  0001 C CNN
+F 3 "" H 1200 3900 50  0001 C CNN
+	1    1200 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61EDD1B2
+P 1950 3900
+F 0 "R?" V 1743 3900 50  0001 C CNN
+F 1 "R2" V 1835 3900 50  0000 C CNN
+F 2 "" V 1880 3900 50  0001 C CNN
+F 3 "~" H 1950 3900 50  0001 C CNN
+	1    1950 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 3900 1600 3900
+Connection ~ 1600 3900
+$Comp
+L Device:R R?
+U 1 1 61EDD993
+P 1950 2950
+F 0 "R?" V 1743 2950 50  0001 C CNN
+F 1 "R2" V 1835 2950 50  0000 C CNN
+F 2 "" V 1880 2950 50  0001 C CNN
+F 3 "~" H 1950 2950 50  0001 C CNN
+	1    1950 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2950 1600 2950
+Connection ~ 1600 2950
+Wire Wire Line
+	2100 2950 2350 2950
+Wire Wire Line
+	2350 2950 2350 2650
+Wire Wire Line
+	2350 2650 2250 2650
+Wire Wire Line
+	2100 3900 2150 3900
+Wire Wire Line
+	2350 3600 2250 3600
+$Comp
+L Device:R R?
+U 1 1 61EDE5E5
+P 1950 2300
+F 0 "R?" V 1743 2300 50  0001 C CNN
+F 1 "R2" V 1835 2300 50  0000 C CNN
+F 2 "" V 1880 2300 50  0001 C CNN
+F 3 "~" H 1950 2300 50  0001 C CNN
+	1    1950 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2300 1600 2300
+Wire Wire Line
+	1600 2300 1600 2550
+Connection ~ 1600 2550
+Wire Wire Line
+	1600 2550 1650 2550
+Text GLabel 2150 2300 2    50   Input ~ 0
+Uref
+Wire Wire Line
+	2150 2300 2100 2300
+Text GLabel 2150 3900 2    50   Input ~ 0
+Uref
+$Comp
+L Device:R R?
+U 1 1 61EE0D33
+P 1950 3300
+F 0 "R?" V 1743 3300 50  0001 C CNN
+F 1 "R2" V 1835 3300 50  0000 C CNN
+F 2 "" V 1880 3300 50  0001 C CNN
+F 3 "~" H 1950 3300 50  0001 C CNN
+	1    1950 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 3300 1600 3300
+Wire Wire Line
+	1600 3300 1600 3500
+Connection ~ 1600 3500
+Wire Wire Line
+	1600 3500 1650 3500
+Wire Wire Line
+	2350 3600 2350 3300
+Wire Wire Line
+	2100 3300 2350 3300
+Wire Wire Line
+	2350 2650 2650 2650
+Connection ~ 2350 2650
+Text GLabel 2650 2650 2    50   Input ~ 0
+Uout+
+Text GLabel 2650 3600 2    50   Input ~ 0
+Uout-
+Wire Wire Line
+	2650 3600 2350 3600
+Connection ~ 2350 3600
+Wire Notes Line
+	2800 3100 2150 3100
+$Comp
+L circuits:voltage_long_3 U?
+U 1 1 61EE4308
+P 2750 3100
+F 0 "U?" H 2808 3100 50  0001 L CNN
+F 1 "Uout" H 2808 3100 50  0000 L CNN
+F 2 "" H 2750 3100 50  0001 C CNN
+F 3 "" H 2750 3100 50  0001 C CNN
+	1    2750 3100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
