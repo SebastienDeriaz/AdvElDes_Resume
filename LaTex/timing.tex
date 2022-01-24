@@ -103,11 +103,32 @@ $k$ est la "taille" du transistor (le nombre d'unités). Le Pmos a le double de 
 \centering
 \includegraphics[width=3.5cm]{img_41.png}
 \end{figure}
-\subsubsection{Exemple de porte NAND à 3 entrées}
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm]{img_42.png}
-\end{figure}
+\subsection{Exemples de portes logiques}
+Tous les exemples sont des portes "unitaires"
+\subsubsection{NAND2}
+\begin{center}
+\includegraphics[scale=1,page=20]{../kicad/resume-crop.pdf}
+\end{center}
+\subsubsection{NAND3}
+\begin{center}
+\includegraphics[scale=1,page=21]{../kicad/resume-crop.pdf}
+\end{center}
+\subsubsection{Inverseur}
+\begin{center}
+\includegraphics[scale=1,page=22]{../kicad/resume-crop.pdf}
+\end{center}
+\subsubsection{NOR2}
+\begin{center}
+\includegraphics[scale=1,page=23]{../kicad/resume-crop.pdf}
+\end{center}
+\subsubsection{NOR3}
+\begin{center}
+\includegraphics[scale=1,page=24]{../kicad/resume-crop.pdf}
+\end{center}
+
+
+
+
 
 \subsubsection{Exemple avec un inverseur}
 $$V_{out}(t)=V_{DD}e^{-t/\tau}\qquad \tau=RC$$
@@ -123,7 +144,7 @@ Délai sur le nœud $i$ :
 \tau_{Di}&=R_1C_1\\&+(R_1)C_2\\&+(R_1+R_3)C_3\\&+(R_1+R_3)C_4\\&+(R_1+R_3+R_i)C_i
 \end{align*}
 \textcolor{OrangeRed}{Attention} On ne considère que les résistances qui sont "sur notre chemin" (pour aller à $C_i$ dans ce cas). Donc les condensateurs qui sont en périphérie sont multipliés uniquement par les résistances qui sont sur notre chemin et qui permettent d'y arriver.
-\subsubsection{Représentation linéaire}
+\subsection{Modèle de délai linéaire}
 $$\frac{\tau_{\pdelay}}{\tau}=d=(p+f)$$
 \paragraph{Délai parasite $p$} : Propre à la porte logique (en principe invariant)
 \paragraph{Délai "d'effort" $f$} : Dépend des charges

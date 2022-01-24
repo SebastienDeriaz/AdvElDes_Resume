@@ -1,0 +1,86 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 22 24
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L circuits:PMOS P?
+U 1 1 61EFE8E5
+P 3000 2600
+F 0 "P?" H 3000 2900 50  0001 C CNN
+F 1 "2" H 3050 2600 50  0000 L CNN
+F 2 "" H 3000 2600 50  0001 C CNN
+F 3 "" H 3000 2600 50  0001 C CNN
+	1    3000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:NMOS N?
+U 1 1 61EFEAC3
+P 3000 3100
+F 0 "N?" H 3000 3400 50  0001 C CNN
+F 1 "1" H 3050 3100 50  0000 L CNN
+F 2 "" H 3000 3100 50  0001 C CNN
+F 3 "" H 3000 3100 50  0001 C CNN
+	1    3000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2800 3100 2850
+Wire Wire Line
+	3100 2850 3250 2850
+Connection ~ 3100 2850
+Wire Wire Line
+	3100 2850 3100 2900
+Text GLabel 3250 2850 2    50   Input ~ 0
+Out
+Wire Wire Line
+	3100 2400 3100 2350
+$Comp
+L power:VCC #PWR?
+U 1 1 61EFF1D0
+P 3100 2350
+F 0 "#PWR?" H 3100 2200 50  0001 C CNN
+F 1 "VCC" H 3117 2523 50  0000 C CNN
+F 2 "" H 3100 2350 50  0001 C CNN
+F 3 "" H 3100 2350 50  0001 C CNN
+	1    3100 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3300 3100 3350
+$Comp
+L power:GND #PWR?
+U 1 1 61EFF33A
+P 3100 3350
+F 0 "#PWR?" H 3100 3100 50  0001 C CNN
+F 1 "GND" H 3105 3177 50  0000 C CNN
+F 2 "" H 3100 3350 50  0001 C CNN
+F 3 "" H 3100 3350 50  0001 C CNN
+	1    3100 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3100 2750 3100
+Wire Wire Line
+	2750 3100 2750 2850
+Wire Wire Line
+	2750 2600 2800 2600
+Wire Wire Line
+	2750 2850 2650 2850
+Connection ~ 2750 2850
+Wire Wire Line
+	2750 2850 2750 2600
+Text GLabel 2650 2850 0    50   Input ~ 0
+A
+$EndSCHEMATC

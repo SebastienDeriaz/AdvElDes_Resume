@@ -86,6 +86,41 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# circuits_NMOS
+#
+DEF circuits_NMOS N 0 0 N N 1 F N
+F0 "N" 0 300 50 H I C CNN
+F1 "circuits_NMOS" 125 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -100 0 -25 0 N
+P 2 0 1 0 -25 100 -25 -100 N
+P 4 0 1 0 100 100 0 100 0 -100 100 -100 N
+X In ~ -200 0 100 R 50 50 1 1 I
+X Inp ~ 100 200 100 D 50 50 1 1 I
+X Out- ~ 100 -200 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# circuits_PMOS
+#
+DEF circuits_PMOS P 0 0 N N 1 F N
+F0 "P" 0 300 50 H I C CNN
+F1 "circuits_PMOS" 125 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -50 0 25 0 1 0 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 0 -25 100 -25 -100 N
+P 4 0 1 0 100 -100 0 -100 0 100 100 100 N
+X In ~ -200 0 100 R 50 50 1 1 I
+X Outn ~ 100 -200 100 U 50 50 1 1 I
+X Outp ~ 100 200 100 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # circuits_current
 #
 DEF circuits_current I 0 0 N N 1 F N

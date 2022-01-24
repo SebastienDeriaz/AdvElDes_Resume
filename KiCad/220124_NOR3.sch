@@ -1,0 +1,190 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 24 24
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L circuits:NMOS N?
+U 1 1 61F09746
+P 2450 3800
+AR Path="/61EE9E25/61EFB3D0/61F09746" Ref="N?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F09746" Ref="N?"  Part="1" 
+F 0 "N?" H 2450 4100 50  0001 C CNN
+F 1 "1" H 2500 3800 50  0000 L CNN
+F 2 "" H 2450 3800 50  0001 C CNN
+F 3 "" H 2450 3800 50  0001 C CNN
+	1    2450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:NMOS N?
+U 1 1 61F0974C
+P 2000 3800
+AR Path="/61EE9E25/61EFB3D0/61F0974C" Ref="N?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F0974C" Ref="N?"  Part="1" 
+F 0 "N?" H 2000 4100 50  0001 C CNN
+F 1 "1" H 2050 3800 50  0000 L CNN
+F 2 "" H 2000 3800 50  0001 C CNN
+F 3 "" H 2000 3800 50  0001 C CNN
+	1    2000 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4000 2100 4050
+Wire Wire Line
+	2550 4050 2550 4000
+Wire Wire Line
+	2100 4050 2100 4100
+Connection ~ 2100 4050
+Wire Wire Line
+	2100 4050 2550 4050
+$Comp
+L power:GND #PWR?
+U 1 1 61F09758
+P 2100 4100
+AR Path="/61EE9E25/61EFB3D0/61F09758" Ref="#PWR?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F09758" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2100 3850 50  0001 C CNN
+F 1 "GND" H 2105 3927 50  0000 C CNN
+F 2 "" H 2100 4100 50  0001 C CNN
+F 3 "" H 2100 4100 50  0001 C CNN
+	1    2100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3800 2200 3800
+Wire Wire Line
+	2100 3600 2100 3550
+Wire Wire Line
+	2100 3550 2550 3550
+Wire Wire Line
+	2550 3550 2550 3600
+Wire Wire Line
+	2550 3550 2650 3550
+Connection ~ 2550 3550
+Text GLabel 2650 3550 2    50   Input ~ 0
+Out
+$Comp
+L circuits:PMOS P?
+U 1 1 61F09765
+P 2450 3300
+AR Path="/61EE9E25/61EFB3D0/61F09765" Ref="P?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F09765" Ref="P?"  Part="1" 
+F 0 "P?" H 2450 3600 50  0001 C CNN
+F 1 "6" H 2500 3300 50  0000 L CNN
+F 2 "" H 2450 3300 50  0001 C CNN
+F 3 "" H 2450 3300 50  0001 C CNN
+	1    2450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L circuits:PMOS P?
+U 1 1 61F0976B
+P 2450 2850
+AR Path="/61EE9E25/61EFB3D0/61F0976B" Ref="P?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F0976B" Ref="P?"  Part="1" 
+F 0 "P?" H 2450 3150 50  0001 C CNN
+F 1 "6" H 2500 2850 50  0000 L CNN
+F 2 "" H 2450 2850 50  0001 C CNN
+F 3 "" H 2450 2850 50  0001 C CNN
+	1    2450 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2650 2550 2600
+$Comp
+L power:VCC #PWR?
+U 1 1 61F09772
+P 2550 2150
+AR Path="/61EE9E25/61EFB3D0/61F09772" Ref="#PWR?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F09772" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2550 2000 50  0001 C CNN
+F 1 "VCC" H 2567 2323 50  0000 C CNN
+F 2 "" H 2550 2150 50  0001 C CNN
+F 3 "" H 2550 2150 50  0001 C CNN
+	1    2550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3050 2550 3100
+Wire Wire Line
+	2550 3500 2550 3550
+Wire Wire Line
+	2250 2850 1700 2850
+Wire Wire Line
+	1700 2850 1700 3800
+Wire Wire Line
+	1700 3800 1800 3800
+Wire Wire Line
+	2200 3300 2250 3300
+Wire Wire Line
+	2200 3300 2200 3800
+Connection ~ 2200 3300
+Text GLabel 1200 2850 0    50   Input ~ 0
+B
+Text GLabel 1200 2400 0    50   Input ~ 0
+A
+Connection ~ 1700 2850
+$Comp
+L circuits:PMOS P?
+U 1 1 61F09E9F
+P 2450 2400
+AR Path="/61EE9E25/61EFB3D0/61F09E9F" Ref="P?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F09E9F" Ref="P?"  Part="1" 
+F 0 "P?" H 2450 2700 50  0001 C CNN
+F 1 "6" H 2500 2400 50  0000 L CNN
+F 2 "" H 2450 2400 50  0001 C CNN
+F 3 "" H 2450 2400 50  0001 C CNN
+	1    2450 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2150 2550 2200
+$Comp
+L circuits:NMOS N?
+U 1 1 61F0AD26
+P 1500 3800
+AR Path="/61EE9E25/61EFB3D0/61F0AD26" Ref="N?"  Part="1" 
+AR Path="/61EE9E25/61F08290/61F0AD26" Ref="N?"  Part="1" 
+F 0 "N?" H 1500 4100 50  0001 C CNN
+F 1 "1" H 1550 3800 50  0000 L CNN
+F 2 "" H 1500 3800 50  0001 C CNN
+F 3 "" H 1500 3800 50  0001 C CNN
+	1    1500 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4000 1600 4050
+Wire Wire Line
+	1600 4050 2100 4050
+Wire Wire Line
+	1300 3800 1250 3800
+Text GLabel 1200 3300 0    50   Input ~ 0
+C
+Wire Wire Line
+	1200 2850 1700 2850
+Wire Wire Line
+	1200 2400 1250 2400
+Wire Wire Line
+	1600 3600 1600 3550
+Wire Wire Line
+	1600 3550 2100 3550
+Connection ~ 2100 3550
+Wire Wire Line
+	1200 3300 2200 3300
+Wire Wire Line
+	1250 3800 1250 2400
+Connection ~ 1250 2400
+Wire Wire Line
+	1250 2400 2250 2400
+$EndSCHEMATC
